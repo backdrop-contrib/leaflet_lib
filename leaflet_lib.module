@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * @file
+ * This module does nothing on its own besides providing the Leaflet library. 
+ * You only need to install it if another module requires it. 
+ */
+ 
+/**
+ * Implements hook_library_info().
+ */
+function leaflet_lib_library_info() {
+  $path = backdrop_get_path('module', 'leaflet_lib');
+  $libraries['leaflet'] = array(
+    'title' => 'leaflet',
+    'website' => 'http://leafletjs.com/',
+    'version' => '1.2.0',
+    'js' => array(
+      $path . '/library/leaflet.js' => array(),
+    ),
+    'css' => array(
+      $path . '/library/leaflet.css' => array(),
+    ),
+  );
+  return $libraries;
+}

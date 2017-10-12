@@ -1,0 +1,4 @@
+name = Leaflet library
+description = Simple wrapper for the Leaflet library to make it available to other modules.
+backdrop = 1.x
+type = module
